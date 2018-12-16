@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+#        dialect: MySQL8Dialect
+#        update更新表结构，如果不存在则创建
+        hbm2ddl:
+          auto: update
+    #打印Sql
+    show-sql: true
